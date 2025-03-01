@@ -1,11 +1,31 @@
-div {
-  border: 20px solid #000; /* this is short hand for setting
-                            the border's width, its type, and color */
-  display: inline-block; /* a way of positioning elements */
-  min-width: 20em; /* the two min styles make the shape */
-  min-height: 25em; /* of the divs oblong*/
-  border-radius: 50%; /* this makes the normally square div round */
-  border-left-color: transparent; /* these remove the color from the left side */
-  border-right-color: transparent; /* the right side */
-  border-bottom-color: transparent; /* and the bottom of the circle */
+/* Center the rainbow on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
 }
+
+/* Style the rainbow arcs */
+div {
+  border: 20px solid #000; /* Sets border width, type, and color */
+  display: block; /* Ensures elements stack on top of each other */
+  min-width: 20em; /* Defines the width */
+  min-height: 10em; /* Adjusted height for better shape */
+  border-radius: 50%; /* Makes it a semi-circle */
+  border-left-color: transparent; /* Hides the left side */
+  border-right-color: transparent; /* Hides the right side */
+  border-bottom-color: transparent; /* Hides the bottom to create the arc */
+  position: absolute;
+}
+
+/* Individual colors for the rainbow */
+#red { border-top-color: #f00; top: 10px; }
+#orange { border-top-color: #ffa500; top: 30px; }
+#yellow { border-top-color: #ff0; top: 50px; }
+#green { border-top-color: #00bc3f; top: 70px; }
+#blue { border-top-color: #06f; top: 90px; }
+#indigo { border-top-color: #8a2be2; top: 110px; }
+#violet { border-top-color: #d300c9; top: 130px; }
